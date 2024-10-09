@@ -61,8 +61,8 @@ in
 
         startup = [
           { command = "systemctl --user restart polybar"; always = true; notification = false; }
-          { command = "xset r rate 200 30"; always = true; notification = false; }
-          { command = "xrandr --output eDP-1-1 --auto --left-of HDMI-0"; notification = false; }
+          #{ command = "xset r rate 200 30"; always = true; notification = false; }
+          #{ command = "xrandr --output eDP-1-1 --auto --left-of HDMI-0"; notification = false; }
           {
             command = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
             always = true;
@@ -122,7 +122,7 @@ in
 
         window.border = 1; # 新規作成した window にのみ有効
 
-        workspaceOutputAssign = [{ output = "eDP-1-1"; workspace = "10"; }];
+        #workspaceOutputAssign = [{ output = "eDP-1-1"; workspace = "10"; }];
       };
 
       extraConfig = ''for_window [all] title_window_icon padding 10px'';
@@ -295,7 +295,7 @@ in
         "bar/side" = {
           "inherit" = "bar/main";
 
-          monitor = "eDP-1-1";
+          monitor = "Virtual1";
         };
 
         "module/oslogo" = {
