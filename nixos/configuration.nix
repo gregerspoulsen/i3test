@@ -21,8 +21,8 @@
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.efi.efiSysMountPoint = "/boot/efi";
+  #boot.loader.efi.canTouchEfiVariables = true;
+  #boot.loader.efi.efiSysMountPoint = "/boot/efi";
 
   networking.hostName = "nixos"; # Define your hostname.
 
@@ -70,9 +70,9 @@
         }
       ];
 
-      layout = "jp";
-      xkbVariant = "OADG109A";
-      videoDrivers = [ "nvidia" ];
+      layout = "dk";
+#      xkbVariant = "OADG109A";
+      #videoDrivers = [ "nvidia" ];
 
       exportConfiguration = true;
     };
@@ -80,14 +80,14 @@
     logind.lidSwitch = "ignore";
   };
 
-  hardware.nvidia.prime = {
-    # 基本的に nvidia カードに接続した外付けディスプレイを常に使用するので offload ではなく sync mode にしておく
-    sync.enable = true;
-
-    # Bus ID は lspci 等で確認できる
-    intelBusId = "PCI:0:2:0";
-    nvidiaBusId = "PCI:1:0:0";
-  };
+  #hardware.nvidia.prime = {
+  #  # 基本的に nvidia カードに接続した外付けディスプレイを常に使用するので offload ではなく sync mode にしておく
+  #  sync.enable = true;#
+#
+ #   # Bus ID は lspci 等で確認できる
+  #  intelBusId = "PCI:0:2:0";
+  #  nvidiaBusId = "PCI:1:0:0";
+  #};
 
   # hardware.opengl.enable = true;
 
@@ -98,12 +98,12 @@
   };
 
   # Configure console keymap
-  console.keyMap = "jp106";
+  console.keyMap = "dk";
 
   # docker
   virtualisation.docker.enable = true;
 
-  nix.settings.trusted-users = [ "root" "tars" ];
+  nix.settings.trusted-users = [ "root" "vagrant" ];
 
   users.users.tars = {
     isNormalUser = true;

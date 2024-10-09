@@ -24,7 +24,7 @@
 
         overlays = [ devshell.overlays.default ];
       };
-      hostname = "tars";
+      hostname = "testbox";
     in
     {
       formatter.${system} = pkgs.nixpkgs-fmt;

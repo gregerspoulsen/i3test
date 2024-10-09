@@ -3,8 +3,8 @@
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "tars";
-  home.homeDirectory = "/home/tars";
+  home.username = "vagrant";
+  home.homeDirectory = "/home/vagrant";
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
