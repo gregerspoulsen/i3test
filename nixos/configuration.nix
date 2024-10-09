@@ -7,7 +7,7 @@
       ./hardware-builder.nix
       ./bootloader.nix
       #./vagrant.nix
-      #./custom-configuration.nix
+      ./custom.nix
     ];
 
 

@@ -106,7 +106,7 @@
               help = "Install home-manager itself and apply the home configuration";
               command = ''
                 export HOME_MANAGER_BACKUP_EXT=old
-                nix run '.#activate/tars'
+                nix run '.#activate/testbox'
                 direnv allow
               '';
             }
@@ -168,7 +168,7 @@
               category = "NixOS";
               help = "Switch nixos to rebuild and apply `configuration.nix` changes";
               command = ''
-                sudo nixos-rebuild switch --flake '.#tars' --impure
+                sudo nixos-rebuild switch --flake '.#testbox' --impure
               '';
             }
             {
