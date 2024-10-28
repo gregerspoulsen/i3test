@@ -64,6 +64,8 @@
     isNormalUser = true;
   };
 
+  console.keyMap = "dk";
+
   security.sudo.extraConfig =
     ''
       Defaults:root,%wheel env_keep+=LOCALE_ARCHIVE
